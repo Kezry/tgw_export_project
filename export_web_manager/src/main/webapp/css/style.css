@@ -1,3 +1,29 @@
+
+#dataList {
+	font-size: 12px;
+}
+.main-header .logo {
+	height: auto;
+	display: flex;
+}
+.main-header .logo .logo-mini {
+    display: block;
+}
+.logo .logo-lg {
+	line-height: initial;
+	padding: 6px;
+
+}
+.logo .logo-lg  img {
+	display: block;
+}
+.logo .logo-lg  i {
+	font-size: 12px;
+	font-style: normal;
+    line-height: 1.5;
+}
+
+
 /* tab 1*/
 .double {
 	line-height: 58px;

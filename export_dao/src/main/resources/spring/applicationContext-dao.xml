@@ -18,6 +18,22 @@
     <!--创建SqlSessionFactoryBean-->
     <bean class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
+
+        <!--Mybatis分页插件-->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <!--拦截器的参数列表-->
+                    <property name="properties">
+                        <value>
+                            helperDialect=mysql
+                            reasonable=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+
         <!--扫描实体类包，自动配置别名-->
         <property name="typeAliasesPackage" value="cn.woukfun.domain"/>
     </bean>
@@ -26,4 +42,6 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="cn.woukfun.dao"/>
     </bean>
+
+
 </beans>
