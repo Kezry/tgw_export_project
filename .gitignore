@@ -1,0 +1,5 @@
+# Project exclude paths
+/export_dao/target/
+/export_domain/target/
+/export_system_service/target/
+/export_web_manager/target/
